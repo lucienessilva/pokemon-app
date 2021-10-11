@@ -1,6 +1,6 @@
 # pokemon-app
 Aplicação Django de integração com a API PokéAPI.<br><br>
-Desenvolvido utlizando Python 3.8 e Django 3.1.2<br><br>
+Desenvolvido utlizando Python 3.8, Django 3.1.2 e Django Rest Framework<br><br>
 
 ## Requisitos
  - Python 3.8
