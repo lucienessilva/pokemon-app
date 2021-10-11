@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class PokeapiappConfig(AppConfig):
-    name = 'pokeapiapp'
+    name = 'Poké API Integration'
