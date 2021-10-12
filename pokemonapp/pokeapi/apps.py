@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class PokeapiappConfig(AppConfig):
+class PokeapiConfig(AppConfig):
     name = 'Poké API Integration'
