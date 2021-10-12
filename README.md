@@ -40,17 +40,15 @@ pip3 install -r requirements.txt
     ```
     python3 manage.py migrate
     python3 manage.py createsuperuser --email admin@example.com --username admin
-    python3 manage.py runserver
     ```
     ambiente produção
 
     ```
     python3 manage.py migrate --settings=pokemonapp.settings.production
     python3 manage.py createsuperuser --email admin@example.com --username admin --settings=pokemonapp.settings.production
-    python3 manage.py runserver --settings=pokemonapp.settings.production
     ```
 
-- Limpar Pokemons<br><br>
+- Excluir todos Pokemons<br><br>
     ambiente desenvolvimento
     ```
     python3 manage.py seed --mode=clear
@@ -60,7 +58,7 @@ pip3 install -r requirements.txt
     python3 manage.py seed --mode=clear --settings=pokemonapp.settings.production
     ```
 
-- Resetar 20 Pokemons<br><br>
+- Incluir 20 Pokemons<br><br>
     ambiente desenvolvimento
     ```
     python3 manage.py seed --mode=refresh
@@ -69,7 +67,16 @@ pip3 install -r requirements.txt
     ```
     python3 manage.py seed --mode=refresh --settings=pokemonapp.settings.production
     ```
-
+- Executar aplicação:
+    ambiente desenvolvimento
+    ```
+    python3 manage.py runserver
+    ```
+    ambiente produção
+    ```
+    python3 manage.py runserver --settings=pokemonapp.settings.production
+    ```
+    
 ## Testes
 Foram acrescentados testes apenas para verificacão do comportamento de deleção.
 ```
