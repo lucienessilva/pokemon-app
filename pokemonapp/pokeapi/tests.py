@@ -7,7 +7,7 @@ class BaseTestCase(TestCase):
     def setUp(self):
         Type.objects.all().delete()
         Pokemon.objects.all().delete()
-        """pokemon deleted not deletes related types"""
+
         self.t1 = Type.objects.create(name='Type1', id=1)
         self.t2 = Type.objects.create(name='Type2', id=2)
         self.t3 = Type.objects.create(name='Type3', id=3)
@@ -27,6 +27,7 @@ class BaseTestCase(TestCase):
 class PokemonTestCase(BaseTestCase):
 
     def test_pokemon_deletion_ok(self):
+        """pokemon deleted not deletes related types"""
         self.p1.delete()
         self.p2.delete()
         self.assertEqual(Type.objects.count(), 3)
@@ -37,7 +38,6 @@ class TypeTestCase(BaseTestCase):
 
     def test_type_deletion_ok(self):
         """type deleted deletes related pokemons"""
-
         self.t1.delete()
         self.assertEqual(Type.objects.count(), 2)
         self.assertEqual(Pokemon.objects.count(), 1)
